@@ -14,6 +14,7 @@ function Home() {
         fetch("https://tech-products.onrender.com/products")
             .then((r) => r.json())
             .then((data) => {
+                console.log(data);
                 setTechProducts(data);
             });
         console.log(techProducts)

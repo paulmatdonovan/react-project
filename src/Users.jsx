@@ -10,9 +10,7 @@ function Users() {
     function handleSubmit(event) {
         event.preventDefault();
         const formData = {
-            user: {
-                username, accountType
-            }
+            username, accountType
         };
 
         fetch("https://tech-products.onrender.com/users", {
@@ -30,9 +28,9 @@ function Users() {
     const userDisplay = users.map((user) => {
         return (
             <Usercard
-                key={user.user.id}
-                username={user.user.username}
-                accountType={user.user.accountType}
+                key={user.id}
+                username={user.username}
+                accountType={user.accountType}
             />
         );
     });
